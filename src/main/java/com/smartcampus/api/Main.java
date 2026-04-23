@@ -40,15 +40,7 @@ public final class Main {
     }
 
     private static String getPublicHost() {
-        String publicHost = System.getProperty(
-                "smartcampus.publicHost",
-                System.getenv().getOrDefault("SMART_CAMPUS_PUBLIC_HOST", DEFAULT_PUBLIC_HOST));
-
-        if ("0.0.0.0".equals(publicHost) || "::".equals(publicHost) || "[::]".equals(publicHost)) {
-            return DEFAULT_PUBLIC_HOST;
-        }
-
-        return publicHost;
+        return DEFAULT_PUBLIC_HOST;
     }
 
     private static int getPort() {
